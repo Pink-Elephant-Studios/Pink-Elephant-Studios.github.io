@@ -1,5 +1,6 @@
 cls
 @echo off
+set xp=0
 :start
 
 echo This is an example of a batch file.
@@ -13,7 +14,7 @@ if %ans%==n GOTO no
 :yes
 
 echo Cool!
-GOTO end
+GOTO experience
 :no
 
 echo well, then
