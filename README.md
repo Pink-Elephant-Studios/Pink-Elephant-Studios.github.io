@@ -16,4 +16,7 @@ You can make lists with simple dashes. Here is my plan for today:
 ## 7/5/2023
 
 -[learn javascript](https://www.w3schools.com/js/default.asp)
+
 -[look at js libraries](https://hackr.io/blog/top-javascript-libraries)  
+
+-explore [wordpress](https://wordpress.org/gutenberg/)
