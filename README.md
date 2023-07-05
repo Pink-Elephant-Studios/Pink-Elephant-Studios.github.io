@@ -21,3 +21,5 @@ You can make lists with simple dashes. Here is my plan for today:
 
 -explore [wordpress](https://wordpress.org/gutenberg/)
 I think wordpress was kinda confusing and big.
+
+-did some javascript stuff with numbers and we did more javascript stuff with buttons and talked about shapes that this james guy made.
