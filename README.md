@@ -13,34 +13,7 @@ You can make lists with simple dashes. Here is my plan for today:
 -get menu bar to work
 -add an .mp3?
 
+## 7/5/2023
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## this
+-[learn javascript](https://www.w3schools.com/js/default.asp)
+-[look at js libraries](https://hackr.io/blog/top-javascript-libraries)  
