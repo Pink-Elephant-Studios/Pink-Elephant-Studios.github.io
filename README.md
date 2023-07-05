@@ -20,3 +20,4 @@ You can make lists with simple dashes. Here is my plan for today:
 -[look at js libraries](https://hackr.io/blog/top-javascript-libraries)  
 
 -explore [wordpress](https://wordpress.org/gutenberg/)
+I think wordpress was kinda confusing and big.
