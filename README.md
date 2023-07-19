@@ -23,3 +23,17 @@ You can make lists with simple dashes. Here is my plan for today:
 I think wordpress was kinda confusing and big.
 
 -did some javascript stuff with numbers and we did more javascript stuff with buttons and talked about shapes that this james guy made.
+
+
+Codeworld
+
+7/19
+
+You enter the Drift Tavern.
+
+The first character to approach you is a shady-looking man named "Scout." He offers to give you a healing potion in exchange for information.
+
+IN GAME: Talk to at least six patrons and find out something about them.
+
+Out of Game: Start with this .md file or your index page, and link to at least five other pages.
+
