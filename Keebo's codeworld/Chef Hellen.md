@@ -1,0 +1,2 @@
+When I met chef Hellen she glared at Scout like everyone else and advised me to stay away from him. She then offered me soggy bread, charred meat, or a tankard with a mystery drink. I spent 30% of my money on some soggy bread and charred meat. 
+![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.com%2Fartwork%2F49orWW&psig=AOvVaw1fXCtPIZdISYvS8N2SCRuX&ust=1689885787309000&source=images&cd=vfe&opi=89978449&ved=0CAwQjRxqFwoTCOCb7KLRm4ADFQAAAAAdAAAAABAE)
