@@ -33,7 +33,7 @@ You enter the Drift Tavern.
 
 The first character to approach you is a shady-looking man named "Scout." He offers to give you a healing potion in exchange for information.
 
-IN GAME: Talk to at least six patrons and find out something about them.
+IN GAME: Talk to at least six patrons and find out something about them. The first person [Keebo](keebo.md) talk's to is the noble.
 
 Out of Game: Start with this .md file or your index page, and link to at least five other pages.
 
