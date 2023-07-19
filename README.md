@@ -37,3 +37,4 @@ IN GAME: Talk to at least six patrons and find out something about them. The fir
 
 Out of Game: Start with this .md file or your index page, and link to at least five other pages.
 
+The second person is Chef Hellen and her soggy bread [Chef Hellen](Chef Hellen.md)
