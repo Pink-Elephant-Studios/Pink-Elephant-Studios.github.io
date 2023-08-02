@@ -1,5 +1,5 @@
 var randomNumber = Math.floor(Math.random()* 20);
-quotes[14]
+quotes[5] 
 var quotes = [
 	"I was told to put a quote here, but I don't know any good quotes",
 	"MY EYESSSSSSS",
