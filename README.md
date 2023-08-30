@@ -1,6 +1,17 @@
 # Pink-Elephant-Studios.github.io
 The most awesome coding studio to learn html, javascript, and python
 
+## 8/30/2023
+
+Possible projects for today:
+- Add some kind of parralax to the website. [example](https://codepen.io/ibrahima92/pen/ExYZPqg)
+- Try again to get rick roll video to not preview
+- Use javascript to unlock hidden endings/content
+- hide a cookie image somewhere in the website (for Stanton)
+- make a [js drum kit](https://codepen.io/amdsouza92/pen/xdooWa)
+- ??
+
+  
 ## 6/7/2023
 
 Do you remember how to use markdown syntax? *This* is italic and **this** is bold
