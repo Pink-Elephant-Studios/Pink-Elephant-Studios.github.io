@@ -110,8 +110,8 @@ function displayInteractiveStory(stories, id) {
       displayInteractiveStory(stories, nextStoryId);
   });
    
-
   // Display initial story on inital render
   // story with id 0 refers to start of the story.
   displayInteractiveStory(stories, 0);
 });
+

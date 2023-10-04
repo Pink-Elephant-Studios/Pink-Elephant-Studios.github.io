@@ -3,7 +3,7 @@
 # Example file showing a circle moving on screen
 import pygame
 
-# pygame setup
+# pygame setup-------------------+++++++++++                                                                                                                                                                                                                                                    `
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()

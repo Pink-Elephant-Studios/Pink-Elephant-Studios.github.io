@@ -33,8 +33,8 @@ def main():
 
     locations = [
         Location("Village", "You are in a peaceful village. You see minecraft Steve off in the distance."),
-        Location("Forest", "You find yourself in a dense forest. A giant monkey jumps onto your head yesterday."),
-        Location("Cave", "A dark cave lies ahead. You have traveled back in time 20 million years and find a dinosaur in the cave."),
+        Location("Forest", "You find yourself in a dense forest. A giant ape jumps onto your head yesterday."),
+        Location("Cave", "A dark cave lies ahead. You have traveled back in time 20 million years and find a dinosaur standing on Elon Musk."),
     ]
 
     current_location = locations[0]  # Start in the village
@@ -63,6 +63,11 @@ def main():
 
         if choice == '1':
             # Explore the location
+            if current_location.name == 'Villiage':
+                player_choice = input("do you want to go into the forest, young buck? y/n?")
+                if player_choice == y:
+
+                    current_location = locations[1]
             if current_location.name == "Forest":
                 # Chance of encountering a monster in the forest
                 if random.random(0,.3) < 0.3:
