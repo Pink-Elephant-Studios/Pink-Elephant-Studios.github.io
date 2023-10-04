@@ -32,9 +32,9 @@ def main():
     player = Character(player_name, health=100, attack=20)
 
     locations = [
-        Location("Village", "You are in a peaceful village."),
-        Location("Forest", "You find yourself in a dense forest."),
-        Location("Cave", "A dark cave lies ahead."),
+        Location("Village", "You are in a peaceful village. You see minecraft Steve off in the distance."),
+        Location("Forest", "You find yourself in a dense forest. A giant monkey jumps onto your head yesterday."),
+        Location("Cave", "A dark cave lies ahead. You have traveled back in time 20 million years and find a dinosaur in the cave."),
     ]
 
     current_location = locations[0]  # Start in the village
@@ -65,7 +65,7 @@ def main():
             # Explore the location
             if current_location.name == "Forest":
                 # Chance of encountering a monster in the forest
-                if random.random() < 0.3:
+                if random.random(0,.3) < 0.3:
                     enemy = random.choice(monsters)
                     print(f"You encountered a {enemy.name}!")
                     while player.is_alive() and enemy.is_alive():
