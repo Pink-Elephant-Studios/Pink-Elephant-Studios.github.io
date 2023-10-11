@@ -1,11 +1,12 @@
 import random
 
 class Character:
-    def __init__(self, name, health, attack):
+    def __init__(self, name, health, attack, speed):
         self.name = name
         self.health = health
+        self.inventory = []
         self.attack = attack
-
+        self.speed = speed
     def take_damage(self, damage):
         self.health -= damage
 
@@ -17,8 +18,11 @@ class Character:
         enemy.take_damage(damage)
         print(f"{self.name} attacks {enemy.name} for {damage} damage!")
 
-    def check_inventory(self, inventory):
-        inventory = [string, shield, candle, FOOD, sword]
+    def set_speed(self):
+        speed = random.randint(1, 10)
+
+    def check_inventory(self):
+        inventory = ["wispy string", "chipped shield", "candle wax", "moldy FOOD", "crusty dusty musty sword"]
         for i in inventory: 
             print ("you have a", {i})
 
@@ -32,10 +36,13 @@ class Location:
         self.description = description
 
 def main():
-    print("Welcome to the RPG Adventure!")
-    player_name = input("Enter your character's name: ")
+    print("Welcome to this weird RPG Adventure!")
+    player_name = input("Enter your character's dumb name: ")
     player = Character(player_name, health=100, attack=20)
-
+    print("Your character's heath is set to " +player.health) 
+    player.set_speed()
+    print("Your character's speed is set to " +player.speed) 
+    pause = input("press enter to continue, young buck")
     locations = [
         Location("Village", "You are in a peaceful village. You see minecraft Steve off in the distance."),
         Location("Forest", "You find yourself in a dense forest. A giant ape jumps onto your head yesterday."),
