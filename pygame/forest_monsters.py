@@ -17,6 +17,11 @@ class Character:
         enemy.take_damage(damage)
         print(f"{self.name} attacks {enemy.name} for {damage} damage!")
 
+    def check_inventory(self, inventory):
+        inventory = [string, shield, candle, FOOD, sword]
+        for i in inventory: 
+            print ("you have a", {i})
+
 class Monster(Character):
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)
@@ -58,7 +63,7 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '3':
-            print("Thanks for playing! Your adventure ends here.")
+            print("Thanks for playing! Your adventure ends here. (Why would you leave me :( )")
             break
 
         if choice == '1':
@@ -79,7 +84,7 @@ def main():
                         enemy.attack_enemy(player)
                         pause = input("bro you trying to continue?")
                         if pause == "no":
-                            print(f"{player.name} runs away from{enemy.name}")
+                            print(f"{player.name} runs away from {enemy.name}")
                             break
                         if not player.is_alive():
                             print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
@@ -93,8 +98,7 @@ def main():
 
         elif choice == '2':
             # Add inventory functionality here if desired
-            print("Inventory feature not implemented yet, we only meet once a week.")
-        
+            player.check_inventory()        
         else:
             print("Invalid choice. Please choose a valid option, bozo.")
 
