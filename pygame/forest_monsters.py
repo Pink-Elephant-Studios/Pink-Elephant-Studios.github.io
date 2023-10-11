@@ -78,6 +78,9 @@ def main():
                     if enemy.is_alive():
                         enemy.attack_enemy(player)
                         pause = input("bro you trying to continue?")
+                        if pause == "no":
+                            print(f"{player.name} runs away from{enemy.name}")
+                            break
                         if not player.is_alive():
                             print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
                             break
@@ -90,10 +93,10 @@ def main():
 
         elif choice == '2':
             # Add inventory functionality here if desired
-            print("Inventory feature not implemented yet.")
+            print("Inventory feature not implemented yet, we only meet once a week.")
         
         else:
-            print("Invalid choice. Please choose a valid option.")
+            print("Invalid choice. Please choose a valid option, bozo.")
 
     print("Game over!")
 
