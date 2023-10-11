@@ -38,11 +38,12 @@ class Location:
 def main():
     print("Welcome to this weird RPG Adventure!")
     player_name = input("Enter your character's dumb name: ")
-    player = Character(player_name, health=100, attack=20)
-    print("Your character's heath is set to " +player.health) 
-    player.set_speed()
-    print("Your character's speed is set to " +player.speed) 
-    pause = input("press enter to continue, young buck")
+    player_speed = random.randint(1,10)
+    player = Character(player_name, health=100, attack=20, speed=player_speed)
+   # print("Your character's heath is set to " +player.health) 
+  #  player.set_speed()
+    print("Your character's speed is set to " ,{player_speed}) 
+    pause = input("Press enter to continue, young buck")
     locations = [
         Location("Village", "You are in a peaceful village. You see minecraft Steve off in the distance."),
         Location("Forest", "You find yourself in a dense forest. A giant ape jumps onto your head yesterday."),
