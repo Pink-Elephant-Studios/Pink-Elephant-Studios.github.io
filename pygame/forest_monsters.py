@@ -27,8 +27,8 @@ class Character:
             print ("you have a", {i})
 
 class Monster(Character):
-    def __init__(self, name, health, attack, monster_speed):
-        super().__init__(name, health, attack, monster_speed)
+    def __init__(self, name, health, attack, speed):
+        super().__init__(name, health, attack, speed)
 
 class Location:
     def __init__(self, name, description):
@@ -38,11 +38,11 @@ class Location:
 def main():
     print("Welcome to this weird RPG Adventure!")
     player_name = input("Enter your character's dumb name: ")
-    player_speed = random.randint(1,10)
-    player = Character(player_name, health=100, attack=20, speed=player_speed)
+    speed = random.randint(1,10)
+    player = Character(player_name, health=100, attack=20, speed=speed)
    # print("Your character's heath is set to " +player.health) 
   #  player.set_speed()
-    print("Your character's speed is set to " ,{player_speed}) 
+    print("Your character's speed is set to " ,{speed}) 
     pause = input("Press enter to continue, young buck")
     locations = [
         Location("Village", "You are in a peaceful village. You see minecraft Steve off in the distance."),
@@ -52,9 +52,9 @@ def main():
 
     current_location = locations[1]  # Start in the forest
 
-    monsters = [Monster("Goblin", health=30, attack=10, monster_speed=7),
-                Monster("Orc", health=50, attack=15, monster_speed=3),
-                Monster("Dragon", health=100, attack=30, monster_speed=9)]
+    monsters = [Monster("Goblin", health=30, attack=10, speed=7),
+                Monster("Orc", health=50, attack=15, speed=3),
+                Monster("Dragon", health=100, attack=30, speed=9)]
 
     while player.is_alive():
         print("\n" + "=" * 20)
@@ -87,8 +87,8 @@ def main():
                 enemy = random.choice(monsters)
                 print(f"You encountered a {enemy.name}!")
                 while player.is_alive() and enemy.is_alive():
-                    #if player_speed > enemy.monster_speed:
-                    print(f"The enemy's speed is {enemy.monster_speed}. Prepare to die!")
+                    #if speed > enemy.speed:
+                    print(f"The enemy's speed is {enemy.speed}. Prepare to die!")
                     player.attack_enemy(enemy)
                     if enemy.is_alive():
                         enemy.attack_enemy(player)
