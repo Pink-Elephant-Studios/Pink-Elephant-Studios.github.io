@@ -52,9 +52,9 @@ def main():
 
     current_location = locations[1]  # Start in the forest
 
-    monsters = [Monster("Goblin", health=30, attack=10, speed=8),
-                Monster("Orc", health=50, attack=15, orc=4),
-                Monster("Dragon", health=100, attack=30, speed=9)]
+    monsters = [Monster("Goblin", health=30, attack=10, monster_speed=7),
+                Monster("Orc", health=50, attack=15, monster_speed=3),
+                Monster("Dragon", health=100, attack=30, monster_speed=9)]
 
     while player.is_alive():
         print("\n" + "=" * 20)
@@ -87,12 +87,14 @@ def main():
                 enemy = random.choice(monsters)
                 print(f"You encountered a {enemy.name}!")
                 while player.is_alive() and enemy.is_alive():
+                    #if player_speed > enemy.monster_speed:
+                    print(f"The enemy's speed is {enemy.monster_speed}. Prepare to die!")
                     player.attack_enemy(enemy)
                     if enemy.is_alive():
                         enemy.attack_enemy(player)
                         pause = input("bro you trying to continue?")
                         if pause == "no":
-                            print(f"{player.name} runs away from {enemy.name}")
+                            print(f"{player.name} runs away from {enemy.name}, you whimp.")
                             break
                         if not player.is_alive():
                             print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
