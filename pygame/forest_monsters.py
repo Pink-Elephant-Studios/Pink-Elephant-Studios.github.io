@@ -1,5 +1,5 @@
 import random
-#yo next time, point buy system, speed fully used, possibility to find new items to add to inventory whne you explore
+#yo next time, point buy system, keep track of turns so initiative is only checked at combat start, possibility to find new items to add to inventory whne you explore
 class Character:
     def __init__(self, name, health, attack, speed):
         self.name = name
@@ -87,20 +87,21 @@ def main():
                 enemy = random.choice(monsters)
                 print(f"You encountered a {enemy.name}!")
                 while player.is_alive() and enemy.is_alive():
-                    #if speed > enemy.speed:
                     print(f"The enemy's speed is {enemy.speed}. Prepare to die!")
-                    player.attack_enemy(enemy)
-                    if enemy.is_alive():
-                        enemy.attack_enemy(player)
-                        pause = input("bro you trying to continue?")
-                        if pause == "no":
-                            print(f"{player.name} runs away from {enemy.name}, you whimp.")
-                            break
-                        if not player.is_alive():
-                            print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
-                            break
+                    if speed > enemy.speed:
+                        player.attack_enemy(enemy)
                     else:
-                        print(f"You defeated the {enemy.name}!")
+                        if enemy.is_alive():
+                            enemy.attack_enemy(player)
+                            pause = input("bro you trying to continue?")
+                            if pause == "no":
+                                print(f"{player.name} runs away from {enemy.name}, you whimp.")
+                                break
+                            if not player.is_alive():
+                                print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
+                                break
+                        else:
+                            print(f"You defeated the {enemy.name}!")
               #  else:
            #         print("You explore the forest but find nothing of interest.")
             else:
