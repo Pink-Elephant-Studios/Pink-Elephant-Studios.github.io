@@ -1,5 +1,5 @@
 import random
-
+#yo next time, point buy system, speed fully used, possibility to find new items to add to inventory whne you explore
 class Character:
     def __init__(self, name, health, attack, speed):
         self.name = name
@@ -27,8 +27,8 @@ class Character:
             print ("you have a", {i})
 
 class Monster(Character):
-    def __init__(self, name, health, attack):
-        super().__init__(name, health, attack)
+    def __init__(self, name, health, attack, monster_speed):
+        super().__init__(name, health, attack, monster_speed)
 
 class Location:
     def __init__(self, name, description):
@@ -52,9 +52,9 @@ def main():
 
     current_location = locations[1]  # Start in the forest
 
-    monsters = [Monster("Goblin", health=30, attack=10),
-                Monster("Orc", health=50, attack=15),
-                Monster("Dragon", health=100, attack=30)]
+    monsters = [Monster("Goblin", health=30, attack=10, speed=8),
+                Monster("Orc", health=50, attack=15, orc=4),
+                Monster("Dragon", health=100, attack=30, speed=9)]
 
     while player.is_alive():
         print("\n" + "=" * 20)
