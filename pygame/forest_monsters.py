@@ -39,6 +39,7 @@ def main():
     print("Welcome to this weird RPG Adventure!")
     player_name = input("Enter your character's dumb name: ")
     speed = random.randint(1,10)
+    turn = 0
     player = Character(player_name, health=100, attack=20, speed=speed)
    # print("Your character's heath is set to " +player.health) 
   #  player.set_speed()
@@ -87,13 +88,26 @@ def main():
                 enemy = random.choice(monsters)
                 print(f"You encountered a {enemy.name}!")
                 while player.is_alive() and enemy.is_alive():
-                    print(f"The enemy's speed is {enemy.speed}. Prepare to die!")
-                    if speed > enemy.speed:
-                        player.attack_enemy(enemy)
+                    #beginning of um initiative if statement
+                    if turn == 0:
+                        print(f"The enemy's speed is {enemy.speed}. Prepare to die! (Initiative has been rolled for you, you're welcome.)")
+                        if speed > enemy.speed:
+                            player.attack_enemy(enemy)
+                            turn += 1
+                        else:
+                            enemy.attack_enemy(player)
+                            turn += 2
+                        #end of um intiative if statement
                     else:
                         if enemy.is_alive():
-                            enemy.attack_enemy(player)
-                            pause = input("bro you trying to continue?")
+                            #Putting test code here
+                            if (turn % 2)==0:
+                                #print("CONGRATULATIONS! ITS YOUR TURN!")
+                                player.attack_enemy(enemy)
+                            else:
+                                enemy.attack_enemy(player)
+                            turn += 1
+                            pause = input("Bro you tryinna continue?")
                             if pause == "no":
                                 print(f"{player.name} runs away from {enemy.name}, you whimp.")
                                 break
@@ -111,7 +125,7 @@ def main():
             # Add inventory functionality here if desired
             player.check_inventory()        
         else:
-            print("Invalid choice. Please choose a valid option, bozo.")
+            print("Invalid choice. Please choose a valid option, bro.")
 
     print("Game over!")
 
