@@ -78,7 +78,7 @@ def main():
         if choice == '1':
             # Explore the location
             if current_location.name == 'Villiage':
-                player_choice = input("do you want to go into the forest, young buck? y/n?")
+                player_choice = input("Do you want to go into the forest, young buck? y/n?")
                 if player_choice == y:
 
                     current_location = locations[1]
@@ -90,9 +90,19 @@ def main():
                 while player.is_alive() and enemy.is_alive():
                     #beginning of um initiative if statement
                     if turn == 0:
+                        #like this will happen the first time player encounters an enemy acutally. the first thing we will do is see who goes first, if the player goes frist they can choose to attack or run. the enemy always attacks. alright done NO dont type that
                         print(f"The enemy's speed is {enemy.speed}. Prepare to die! (Initiative has been rolled for you, you're welcome.)")
                         if speed > enemy.speed:
-                            player.attack_enemy(enemy)
+                            #give player choice to run or fight
+                            answer = input("Do you and then do do you [r]un or [f]ight")
+                            # Check the user's input using if statements
+                            if answer == "r" or answer.lower() == "run":
+                                print("You chose to run.")
+                            elif answer == "f" or answer.lower() == "fight":
+                                print("You chose to fight.")
+                                player.attack_enemy(enemy)
+                            else:
+                                print("Invalid choice. Please enter 'r' or 'run' to run, or 'f' or 'fight' to fight.")
                             turn += 1
                         else:
                             enemy.attack_enemy(player)
@@ -103,16 +113,31 @@ def main():
                             #Putting test code here
                             if (turn % 2)==0:
                                 #print("CONGRATULATIONS! ITS YOUR TURN!")
-                                player.attack_enemy(enemy)
+                                #option to run or fight
+                              #  if speed > enemy.speed:
+                            #give player choice to run or fight
+                                answer = input("Do you [r]un or [f]ight")
+                                # Check the user's input using if statements
+                                if answer == "r" or answer.lower() == "run":
+                                    print("You chose to run.")
+                                elif answer == "f" or answer.lower() == "fight":
+                                    print("You chose to fight.")
+                                    player.attack_enemy(enemy)
+                                else:
+                                    print("Invalid choice. Please enter 'r' or 'run' to run, or 'f' or 'fight' to fight.")
+
+
+
+
                             else:
                                 enemy.attack_enemy(player)
                             turn += 1
-                            pause = input("Bro you tryinna continue?")
+                            pause = input("Bro you tryinna continue? Say no to run away, or any other key to continue bro.")
                             if pause == "no":
                                 print(f"{player.name} runs away from {enemy.name}, you whimp.")
                                 break
                             if not player.is_alive():
-                                print(f"{player.name} has been defeated by {enemy.name}. Game over! You suck!")
+                                print(f"{player.name} has been defeated by {enemy.name}. You suck!")
                                 break
                         else:
                             print(f"You defeated the {enemy.name}!")
