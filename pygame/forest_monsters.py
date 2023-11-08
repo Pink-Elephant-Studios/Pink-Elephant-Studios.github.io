@@ -4,7 +4,7 @@ class Character:
     def __init__(self, name, health, attack, speed):
         self.name = name
         self.health = health
-        self.inventory = []
+        self.inventory = ["wispy string", "a chipped shield", "candle wax", "moldy FOOD", "a crusty dusty musty sword"]
         self.attack = attack
         self.speed = speed
     def take_damage(self, damage):
@@ -22,9 +22,9 @@ class Character:
         speed = random.randint(1, 10)
 
     def check_inventory(self):
-        inventory = ["wispy string", "chipped shield", "candle wax", "moldy FOOD", "crusty dusty musty sword"]
-        for i in inventory: 
-            print ("you have a", {i})
+        #inventory = []
+        for i in self.inventory: 
+            print ("you have", {i})
 
 class Monster(Character):
     def __init__(self, name, health, attack, speed):
@@ -125,10 +125,6 @@ def main():
                                     player.attack_enemy(enemy)
                                 else:
                                     print("Invalid choice. Please enter 'r' or 'run' to run, or 'f' or 'fight' to fight.")
-
-
-
-
                             else:
                                 enemy.attack_enemy(player)
                             turn += 1
@@ -141,10 +137,17 @@ def main():
                                 break
                         else:
                             print(f"You defeated the {enemy.name}!")
-              #  else:
-           #         print("You explore the forest but find nothing of interest.")
-            else:
-                print("You explore the area but find nothing of interest.")
+                if not enemy.is_alive():
+                    print(f"You loot the {enemy.name}'s corpse.")
+                    print(f"You find a nice iron sword.")
+                    try:
+                        player.inventory.append("nice iron sword")
+                        for item in player.inventory:
+                            print(f"You have a {item}")
+                    except:
+                        print(f"Your code doesn't work, and you suck at programming")
+           #        Do the loot test here bc the player is alive but the enemy is not
+            # use later:    print("You explore the area but find nothing of interest.")
 
         elif choice == '2':
             # Add inventory functionality here if desired
