@@ -1,10 +1,18 @@
 import random
 #yo next time, point buy system, keep track of turns so initiative is only checked at combat start, possibility to find new items to add to inventory whne you explore
+# inventory system
+## add axe to monster inventory
+###bonus randomize weapon in inventory
+##when enemy is defeated get axe from monster inventory
+##append axe to player inventory as usual
+#add function to enemy class to generate random item/inventory
+def test():
+    print ("we are trying to print the first item in the enemy's inventory list, which is", enemy.inventory[1])
 class Character:
     def __init__(self, name, health, attack, speed):
         self.name = name
         self.health = health
-        self.inventory = ["wispy string", "a chipped shield", "candle wax", "moldy FOOD", "a crusty dusty musty sword"]
+        self.inventory = ["wispy string"]
         self.attack = attack
         self.speed = speed
     def take_damage(self, damage):
@@ -29,7 +37,9 @@ class Character:
 class Monster(Character):
     def __init__(self, name, health, attack, speed):
         super().__init__(name, health, attack, speed)
-
+        enemy_inventory=["air", "crumbs", "sword", "DECK OF MANY THINGS"]
+        random_item = random.choice(enemy_inventory)
+        print(random_item)
 class Location:
     def __init__(self, name, description):
         self.name = name
@@ -137,6 +147,8 @@ def main():
                                 break
                         else:
                             print(f"You defeated the {enemy.name}!")
+                            for i in enemy.inventory: 
+                                print ("you find", {i})
                 if not enemy.is_alive():
                     print(f"You loot the {enemy.name}'s corpse.")
                     print(f"You find a nice iron sword.")
@@ -159,3 +171,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    test()
