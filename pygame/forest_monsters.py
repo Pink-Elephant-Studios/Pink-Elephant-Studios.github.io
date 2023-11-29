@@ -1,18 +1,20 @@
 import random
-#yo next time, point buy system, keep track of turns so initiative is only checked at combat start, possibility to find new items to add to inventory whne you explore
 # inventory system
 ## add axe to monster inventory
 ###bonus randomize weapon in inventory
 ##when enemy is defeated get axe from monster inventory
 ##append axe to player inventory as usual
 #add function to enemy class to generate random item/inventory
+#gold and merchant system to buy and sell items
+##################################################################################
+#actively working on under this line
 def test():
     print ("we are trying to print the first item in the enemy's inventory list, which is", enemy.inventory[1])
 class Character:
     def __init__(self, name, health, attack, speed):
         self.name = name
         self.health = health
-        self.inventory = ["wispy string"]
+        self.inventory = inventory
         self.attack = attack
         self.speed = speed
     def take_damage(self, damage):
