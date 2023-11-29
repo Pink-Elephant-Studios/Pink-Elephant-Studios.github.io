@@ -11,7 +11,7 @@ import random
 def test():
     print ("we are trying to print the first item in the enemy's inventory list, which is", enemy.inventory[1])
 class Character:
-    def __init__(self, name, health, attack, speed):
+    def __init__(self, name, health, inventory, attack, speed):
         self.name = name
         self.health = health
         self.inventory = inventory
@@ -37,8 +37,8 @@ class Character:
             print ("you have", {i})
 
 class Monster(Character):
-    def __init__(self, name, health, attack, speed):
-        super().__init__(name, health, attack, speed)
+    def __init__(self, name, health, inventory, attack, speed):
+        super().__init__(name, health, inventory, attack, speed)
         enemy_inventory=["air", "crumbs", "sword", "DECK OF MANY THINGS"]
         random_item = random.choice(enemy_inventory)
         print(random_item)
@@ -52,7 +52,8 @@ def main():
     player_name = input("Enter your character's dumb name: ")
     speed = random.randint(1,10)
     turn = 0
-    player = Character(player_name, health=100, attack=20, speed=speed)
+
+    player = Character(player_name, health=100, inventory, attack=20, speed=speed)
    # print("Your character's heath is set to " +player.health) 
   #  player.set_speed()
     print("Your character's speed is set to " ,{speed}) 
