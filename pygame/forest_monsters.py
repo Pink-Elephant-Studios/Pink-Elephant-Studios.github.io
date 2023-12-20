@@ -53,7 +53,7 @@ def main():
     speed = random.randint(1,10)
     turn = 0
 
-    player = Character(player_name, health=100, inventory, attack=20, speed=speed)
+    player = Character(player_name, health=100, inventory=[], attack=20, speed=speed)
    # print("Your character's heath is set to " +player.health) 
   #  player.set_speed()
     print("Your character's speed is set to " ,{speed}) 
@@ -66,9 +66,9 @@ def main():
 
     current_location = locations[1]  # Start in the forest
 
-    monsters = [Monster("Goblin", health=30, attack=10, speed=7),
-                Monster("Orc", health=50, attack=15, speed=3),
-                Monster("Dragon", health=100, attack=30, speed=9)]
+    monsters = [Monster("Goblin", inventory=["bone","knife"], health=30, attack=10, speed=7),
+                Monster("Orc", inventory=["bone","knife"], health=50, attack=15, speed=3),
+                Monster("Dragon", inventory=["bone","knife"], health=100, attack=30, speed=9)]
 
     while player.is_alive():
         print("\n" + "=" * 20)
@@ -141,7 +141,7 @@ def main():
                             else:
                                 enemy.attack_enemy(player)
                             turn += 1
-                            pause = input("Bro you tryinna continue? Say no to run away, or any other key to continue bro.")
+                            pause = input("Bro you tryinna continue? Say no to run away, or any other key to continue.")
                             if pause == "no":
                                 print(f"{player.name} runs away from {enemy.name}, you whimp.")
                                 break
