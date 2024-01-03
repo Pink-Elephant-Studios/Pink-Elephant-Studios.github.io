@@ -1,5 +1,13 @@
 # Pink-Elephant-Studios.github.io
 The most awesome coding studio to learn html, javascript, and python
+## 1/3/2024
+- [] Add cave to game as a place to fight monsters
+
+
+## 11/29/2023
+- [x] learn about class and functions, ContinuityDrift didn't show his work so he FAILED
+- [ ] add axe to monster inventory "I guess would be pretty easy" - me
+- [ ] 
 
 ## 8/30/2023
 
